@@ -36,6 +36,25 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('rotateClockwise').addEventListener('mouseleave', stopRotation);
     document.getElementById('rotateCounterClockwise').addEventListener('mouseleave', stopRotation);
 
+    document.addEventListener('keydown', function(event) {
+        if (event.code === 'Space' || event.code === 'ArrowRight' || event.code === 'ArrowLeft') {
+            event.preventDefault(); // Prevent the default action for these keys
+            if (event.code === 'Space') {
+                isFollowingMouse = !isFollowingMouse;
+            } else if (event.code === 'ArrowRight') {
+                startRotation('clockwise');
+            } else if (event.code === 'ArrowLeft') {
+                startRotation('counter-clockwise');
+            }
+        }
+    });
+    
+        document.addEventListener('keyup', function(event) {
+            if (event.code === 'ArrowRight' || event.code === 'ArrowLeft') {
+                stopRotation();
+            }
+        });
+
     document.addEventListener('mousemove', function(e) {
         if (!isFollowingMouse) return; // Exit if not following mouse
 

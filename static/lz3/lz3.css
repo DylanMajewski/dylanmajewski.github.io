@@ -1,3 +1,22 @@
+
+/* Styling for buttons to fit the Led Zeppelin theme */
+button {
+    background-color: #202020; /* Dark grey, almost black for buttons */
+    color: #C0C0C0; /* Silver text color */
+    border: 1px solid #707070; /* Slightly lighter border for definition */
+    padding: 10px 20px; /* Spacing inside the button */
+    font-size: 16px; /* Readable text size */
+    font-weight: bold; /* Bold text for emphasis */
+    margin-bottom: 10px; /* Space between buttons */
+    cursor: pointer; /* Cursor indicates clickable */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effects */
+}
+
+button:hover {
+    background-color: #404040; /* Darker grey on hover for feedback */
+    color: #FFFFFF; /* White text on hover for better visibility */
+}
+
 body, html {
     margin: 100hv;
     height: 100%; /* Ensure full height */
@@ -6,6 +25,10 @@ body, html {
            top: 1;
     left: 1;
     flex-direction: column; /* Stack content vertically */
+    background-color: #000; /* Black background to match Led Zeppelin's iconic dark themes */
+    color: #fff; /* White text for contrast */
+    font-family: 'Rockwell', 'Courier Bold', serif; /* Rockwell or similar for a classic rock feel */
+
 }
 .image-container {
     position: relative;
@@ -14,6 +37,8 @@ body, html {
     display: flex; /* Use flexbox to center the image if needed */
     justify-content: center;
     align-items: center;
+    text-align: center; /* Center images horizontally */
+    position: relative; /* Allows for absolute positioning of images inside */
 }
 
 #rotatableImage, #image2 {
