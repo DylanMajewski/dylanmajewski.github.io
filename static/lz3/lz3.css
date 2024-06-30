@@ -1,0 +1,42 @@
+body, html {
+    margin: 100hv;
+    height: 100%; /* Ensure full height */
+    width: 100%; /* Ensure full width */
+    display: flex;
+           top: 1;
+    left: 1;
+    flex-direction: column; /* Stack content vertically */
+}
+.image-container {
+    position: relative;
+    width: 100%; /* Take up full width */
+    min-height: 100vh; /* Minimum height to fill the screen vertically */
+    display: flex; /* Use flexbox to center the image if needed */
+    justify-content: center;
+    align-items: center;
+}
+
+#rotatableImage, #image2 {
+    object-fit: cover; /* Cover the area without losing aspect ratio */
+    width: auto; /* Adjust width automatically */
+    position: absolute;
+            justify-content: center;
+    align-items: center;
+
+    top: 1;
+    left: 1;
+}
+
+#rotatableImage {
+            max-height: 89vh; /* Ensure image does not exceed viewport height */
+
+    transition: transform 0.1s; /* Smooth rotation */
+    transform-origin: center; /* Rotate around the center */
+    z-index: 1; /* Ensures rotatableImage is behind image2 */
+}
+
+#image2 {
+            max-height: 90vh; /* Ensure image does not exceed viewport height */
+
+    z-index: 2; /* Ensures image2 covers rotatableImage */
+}
