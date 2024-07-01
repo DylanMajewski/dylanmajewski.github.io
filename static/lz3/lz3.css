@@ -1,5 +1,5 @@
-
 /* Styling for buttons to fit the Led Zeppelin theme */
+
 button {
     background-color: #202020; /* Dark grey, almost black for buttons */
     color: #C0C0C0; /* Silver text color */
@@ -7,7 +7,6 @@ button {
     padding: 10px 20px; /* Spacing inside the button */
     font-size: 16px; /* Readable text size */
     font-weight: bold; /* Bold text for emphasis */
-    margin-bottom: 10px; /* Space between buttons */
     cursor: pointer; /* Cursor indicates clickable */
     transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effects */
 }
@@ -18,23 +17,37 @@ button:hover {
 }
 
 body, html {
-    margin: 100hv;
-    height: 100%; /* Ensure full height */
-    width: 100%; /* Ensure full width */
+    margin: 0; /* Remove default margin */
+    /* Removed height: 100vh; to allow for flexible content height */
+    width: 100vw; /* Full viewport width */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
     display: flex;
-           top: 1;
-    left: 1;
     flex-direction: column; /* Stack content vertically */
     background-color: #000; /* Black background to match Led Zeppelin's iconic dark themes */
     color: #fff; /* White text for contrast */
     font-family: 'Rockwell', 'Courier Bold', serif; /* Rockwell or similar for a classic rock feel */
-
+    justify-content: flex-start; /* Adjusted to flex-start to accommodate nav bar */
+    align-items: center; /* Center vertically */
+    text-align: center; /* Center text */
 }
+
+/* Add specific styles for the nav bar if it's part of the HTML structure */
+.nav-bar {
+    width: 100%; /* Full width */
+    position: fixed; /* Fixed at the top */
+    top: 0; /* Align to top */
+    z-index: 1000; /* Ensure it's above other content */
+    /* Add background, padding, etc., as needed */
+}
+
 .image-container {
     position: relative;
     width: 100%; /* Take up full width */
     min-height: 100vh; /* Minimum height to fill the screen vertically */
     display: flex; /* Use flexbox to center the image if needed */
+    padding: 0%; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+
     justify-content: center;
     align-items: center;
     text-align: center; /* Center images horizontally */
@@ -44,6 +57,8 @@ body, html {
 #rotatableImage, #image2 {
     object-fit: cover; /* Cover the area without losing aspect ratio */
     width: auto; /* Adjust width automatically */
+    padding: 0%; /* Remove default padding */
+    margin: 0; /* Remove default margin */
     position: absolute;
             justify-content: center;
     align-items: center;
@@ -58,6 +73,7 @@ body, html {
     transition: transform 0.1s; /* Smooth rotation */
     transform-origin: center; /* Rotate around the center */
     z-index: 1; /* Ensures rotatableImage is behind image2 */
+    margin-bottom: 0; /* Reduce space at the bottom */
 }
 
 #image2 {
