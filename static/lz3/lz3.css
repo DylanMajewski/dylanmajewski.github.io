@@ -26,7 +26,7 @@ body, html {
     background-color: #000; /* Black background to match Led Zeppelin's iconic dark themes */
     color: #fff; /* White text for contrast */
     font-family: 'Rockwell', 'Courier Bold', serif; /* Rockwell or similar for a classic rock feel */
-    justify-content: flex-start; /* Adjusted to flex-start to accommodate nav bar */
+    justify-content: center; /* Adjusted to flex-start to accommodate nav bar */
     align-items: center; /* Center vertically */
     text-align: center; /* Center text */
 }
@@ -43,7 +43,7 @@ body, html {
 .image-container {
     position: relative;
     width: 100%; /* Take up full width */
-    min-height: 100vh; /* Minimum height to fill the screen vertically */
+    min-height: 90vh; /* Minimum height to fill the screen vertically */
     display: flex; /* Use flexbox to center the image if needed */
     padding: 0%; /* Remove default padding */
     margin: 0; /* Remove default margin */
@@ -51,7 +51,7 @@ body, html {
     justify-content: center;
     align-items: center;
     text-align: center; /* Center images horizontally */
-    position: relative; /* Allows for absolute positioning of images inside */
+    position: relative;
 }
 
 #rotatableImage, #image2 {
@@ -60,15 +60,16 @@ body, html {
     padding: 0%; /* Remove default padding */
     margin: 0; /* Remove default margin */
     position: absolute;
-            justify-content: center;
+    justify-content: center;
     align-items: center;
-
+    max-width: 90%;
     top: 1;
     left: 1;
+    transform-origin: center;
 }
 
 #rotatableImage {
-            max-height: 89vh; /* Ensure image does not exceed viewport height */
+            max-height: 88vh; /* Ensure image does not exceed viewport height */
 
     transition: transform 0.1s; /* Smooth rotation */
     transform-origin: center; /* Rotate around the center */

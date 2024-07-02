@@ -35,8 +35,7 @@
         
     </style>
 </head>
-<body> 
-    <div>   
+<body>   
     <header>
         <h1>Dylan Majewski's Website</h1>
         <p>It's my website</p>
@@ -44,12 +43,11 @@
     
     
     <nav class="global">
-        <a href="/">Homepage</a>
+        <a href="/">Home</a>
         <a href="/projects">Projects</a>
         <a href="/demos">Demos</a>
         <a href="/blog">Blog</a>
         <a href="/about">About</a>
-        <a href="/unfinished-page">Unfinished Page</a>
     </nav>
     
     <main>
@@ -58,22 +56,33 @@
     
         <h2>Led Zeppelin 3 Vinyl Album Art Simulator</h2>
     
-    <div style="margin-top: 20px;"> <!-- Added space at the top --><p>
-    <button id="toggleFollowMouse">Toggle Follow Mouse (Spacebar)</button>
-    
-<button id="rotateCounterClockwise">Rotate Counter-Clockwise (left)</button>
-<button id="rotateClockwise">Rotate Clockwise (right)</button>
-
     
     <div class="row">
-    <p class="image-container">
-                <img align="center" id="rotatableImage" src="../static/lz3/vovelle.png" style="max-width: 100%" >
-                <img align="center" id="image2" src="../static/lz3/g1.png" style="max-width: 100%;" >
-    </p>
-    </p>
+    <div class="image-container">
+                
+                <img align="center" id="rotatableImage" src="../static/lz3/vovelle.svg">
+                <img align="center" id="image2" src="../static/lz3/g1.png">
+    </div>
+
+
+    <div style="z-index: 3; max-width: 1000px; margin-bottom: 20px">
+        
+        <button id="rotateCounterClockwise">Rotate Counter-Clockwise (left)</button>
+        <button id="rotateClockwise">Rotate Clockwise (right)</button>
+        <button id="toggleFollowMouse" >Toggle Follow Mouse</button>
+        
+        
+        
+        
+        <div>
+    <button class="angleButton" data-angle="20">Jones</button>
+    <button class="angleButton" data-angle="115">Page</button>
+    <button class="angleButton" data-angle="240">Bonham</button>
+    <button class="angleButton" data-angle="287">Plant</button>
+</div>
+    </div>
 
     </main>
-    </div>
 
     
 </body>

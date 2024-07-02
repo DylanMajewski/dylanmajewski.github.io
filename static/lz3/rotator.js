@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     const image = document.getElementById('rotatableImage');
     let lastAngle = 0;
-    let isFollowingMouse = true; // Default state is true to follow the mouse
+    let isFollowingMouse = false; // Default state is False to follow the mouse
     let rotationIntervalId = null; // To store the interval ID
 
     document.getElementById('toggleFollowMouse').addEventListener('click', function() {
@@ -9,14 +9,21 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Function to start rotation
-    function startRotation(direction) {
-        if (rotationIntervalId !== null) return; // Prevent multiple intervals
-        rotationIntervalId = setInterval(() => {
-            lastAngle += (direction === 'clockwise' ? 1 : -1); // Adjust rotation speed here
-            image.style.transform = `rotate(${lastAngle}deg)`;
-            document.getElementById('rotationAngleDisplay').textContent = `Rotation Angle: ${lastAngle.toFixed(2)}°`;
-        }, 20); // Adjust rotation speed by changing the interval time
+function startRotation(direction) {
+    if (rotationIntervalId !== null) return; // Prevent multiple intervals
+
+    // Extract the current rotation angle from the transform style
+    const currentRotationMatch = image.style.transform.match(/rotate\((\d+)deg\)/);
+    if (currentRotationMatch) {
+        lastAngle = parseInt(currentRotationMatch[1], 10);
     }
+
+    rotationIntervalId = setInterval(() => {
+        lastAngle += (direction === 'clockwise' ? 1 : -1); // Adjust rotation speed here
+        image.style.transform = `rotate(${lastAngle}deg)`;
+        document.getElementById('rotationAngleDisplay').textContent = `Rotation Angle: ${lastAngle.toFixed(0)}°`;
+    }, 20); // Adjust rotation speed by changing the interval time
+}
 
     // Function to stop rotation
     function stopRotation() {
@@ -35,6 +42,14 @@ document.addEventListener('DOMContentLoaded', function() {
     // Also consider stopping rotation when the mouse leaves the button area
     document.getElementById('rotateClockwise').addEventListener('mouseleave', stopRotation);
     document.getElementById('rotateCounterClockwise').addEventListener('mouseleave', stopRotation);
+
+    // Attach finger event listeners to buttons
+    document.getElementById('rotateClockwise').addEventListener('touchstart', () => startRotation('clockwise'));
+    document.getElementById('rotateCounterClockwise').addEventListener('touchstart', () => startRotation('counter-clockwise'));
+
+    // Stop rotation when finger is up
+    document.getElementById('rotateClockwise').addEventListener('touchend', stopRotation);
+    document.getElementById('rotateCounterClockwise').addEventListener('touchend', stopRotation);
 
     document.addEventListener('keydown', function(event) {
         if (event.code === 'Space' || event.code === 'ArrowRight' || event.code === 'ArrowLeft') {
@@ -69,7 +84,17 @@ document.addEventListener('DOMContentLoaded', function() {
         lastAngle += diff;
         image.style.transform = `rotate(${lastAngle}deg)`;
 
-        document.getElementById('rotationAngleDisplay').textContent = `Rotation Angle: ${lastAngle.toFixed(2)}°`;
+        document.getElementById('rotationAngleDisplay').textContent = `Rotation Angle: ${lastAngle.toFixed(0)}°`;
+    });
+    
+    document.querySelectorAll('.angleButton').forEach(button => {
+        button.addEventListener('click', function() {
+            var angle = this.getAttribute('data-angle'); // Get the angle from button
+            var image = document.getElementById('rotatableImage'); // Assuming you have an image with this ID
+            if(image) {
+                image.style.transform = 'rotate(' + angle + 'deg)'; // Apply rotation
+            }
+        });
     });
 
     function angle(cx, cy, ex, ey) {
