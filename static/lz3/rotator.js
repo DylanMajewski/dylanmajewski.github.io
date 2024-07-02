@@ -3,6 +3,21 @@ document.addEventListener('DOMContentLoaded', function() {
     let lastAngle = 0;
     let isFollowingMouse = false; // Default state is False to follow the mouse
     let rotationIntervalId = null; // To store the interval ID
+    let autoRotateActive = false; // Tracks the state of auto rotation
+
+// Function to toggle auto rotation
+function toggleAutoRotation() {
+    if (autoRotateActive) {
+        stopRotation(); // Stop rotation if currently active
+        autoRotateActive = false;
+    } else {
+        startRotation('clockwise'); // Start rotation in a default direction, e.g., clockwise
+        autoRotateActive = true;
+    }
+}
+
+// Attach event listener to the toggle button
+document.getElementById('toggleAutoRotate').addEventListener('click', toggleAutoRotation);
 
     document.getElementById('toggleFollowMouse').addEventListener('click', function() {
         isFollowingMouse = !isFollowingMouse;
@@ -28,7 +43,8 @@ function startRotation(direction) {
     // Function to stop rotation
     function stopRotation() {
         clearInterval(rotationIntervalId);
-        rotationIntervalId = null;
+    rotationIntervalId = null;
+    autoRotateActive = false; // Reset auto rotation state
     }
 
     // Attach event listeners to buttons
@@ -38,6 +54,7 @@ function startRotation(direction) {
     // Stop rotation when mouse is up
     document.getElementById('rotateClockwise').addEventListener('mouseup', stopRotation);
     document.getElementById('rotateCounterClockwise').addEventListener('mouseup', stopRotation);
+
 
     // Also consider stopping rotation when the mouse leaves the button area
     document.getElementById('rotateClockwise').addEventListener('mouseleave', stopRotation);
@@ -96,6 +113,7 @@ function startRotation(direction) {
             }
         });
     });
+    
 
     function angle(cx, cy, ex, ey) {
         const dy = ey - cy;

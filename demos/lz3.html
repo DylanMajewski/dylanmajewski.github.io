@@ -56,6 +56,7 @@
     
         <h2>Led Zeppelin 3 Vinyl Album Art Simulator</h2>
     
+    Press the buttons below to rotate the image
     
     <div class="row">
     <div class="image-container">
@@ -65,21 +66,23 @@
     </div>
 
 
-    <div style="z-index: 3; max-width: 1000px; margin-bottom: 20px">
+    <div style="z-index: 3; width: 90vh;">
         
-        <button id="rotateCounterClockwise">Rotate Counter-Clockwise (left)</button>
-        <button id="rotateClockwise">Rotate Clockwise (right)</button>
-        <button id="toggleFollowMouse" >Follow Mouse/Tap</button>
+        <button id="rotateCounterClockwise">Hold left</button>
+        <button id="rotateClockwise">Hold Right</button>
+
+<button id="toggleAutoRotate">Toggle Auto Rotate</button>        
         
         
         
-        
-        <div>
+    </div>
+    <div style="margin-bottom: 20px">
+
     <button class="angleButton" data-angle="20">Jones</button>
     <button class="angleButton" data-angle="115">Page</button>
     <button class="angleButton" data-angle="240">Bonham</button>
     <button class="angleButton" data-angle="287">Plant</button>
-</div>
+    <button id="toggleFollowMouse" >Point to Mouse/Tap</button>
     </div>
 
     </main>
