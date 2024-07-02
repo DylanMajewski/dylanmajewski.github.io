@@ -62,7 +62,8 @@ body, html {
     position: absolute;
     justify-content: center;
     align-items: center;
-    max-width: 90%;
+    max-width: 95vw;
+    width: 90%;
     top: 1;
     left: 1;
     transform-origin: center;
@@ -81,4 +82,14 @@ body, html {
             max-height: 90vh; /* Ensure image does not exceed viewport height */
 
     z-index: 2; /* Ensures image2 covers rotatableImage */
+}
+
+.controls {
+    z-index: 3;
+    width: 90vh;
+    max-width: 90vw;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
 }
