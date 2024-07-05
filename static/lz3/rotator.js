@@ -36,7 +36,6 @@ function startRotation(direction) {
     rotationIntervalId = setInterval(() => {
         lastAngle += (direction === 'clockwise' ? 1 : -1); // Adjust rotation speed here
         image.style.transform = `rotate(${lastAngle}deg)`;
-        document.getElementById('rotationAngleDisplay').textContent = `Rotation Angle: ${lastAngle.toFixed(0)}°`;
     }, 20); // Adjust rotation speed by changing the interval time
 }
 
@@ -100,8 +99,6 @@ function startRotation(direction) {
         diff += (diff > 180) ? -360 : (diff < -180) ? 360 : 0;
         lastAngle += diff;
         image.style.transform = `rotate(${lastAngle}deg)`;
-
-        document.getElementById('rotationAngleDisplay').textContent = `Rotation Angle: ${lastAngle.toFixed(0)}°`;
     });
     
     document.querySelectorAll('.angleButton').forEach(button => {

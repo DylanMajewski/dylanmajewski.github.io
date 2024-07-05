@@ -1,14 +1,31 @@
 /* Styling for buttons to fit the Led Zeppelin theme */
 
+@font-face {
+    font-family: 'ZEPPELIN';
+    src: url('../fonts/ZEPPELIN.ttf') format('truetype'); /* Safari, Android, iOS */
+    /* src: url('../fonts/ format('woff2'), Modern Browsers */
+}
+
+@font-face {
+    font-family: 'carouselambra';
+    src: url('../fonts/carouselambra.ttf') format('truetype'); /* Safari, Android, iOS */
+    /* src: url('../fonts/ format('woff2'), Modern Browsers */
+}
+
 button {
     background-color: #202020; /* Dark grey, almost black for buttons */
     color: #C0C0C0; /* Silver text color */
     border: 1px solid #707070; /* Slightly lighter border for definition */
-    padding: 10px 20px; /* Spacing inside the button */
-    font-size: 16px; /* Readable text size */
-    font-weight: bold; /* Bold text for emphasis */
+    z-index: 3;
+    padding: 5px 10px; /* Buffer around the text */
+    font-family: 'ZEPPELIN', sans-serif;
     cursor: pointer; /* Cursor indicates clickable */
     transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effects */
+    display: inline-block;
+    font-size: 2em;
+    margin: 1px; /* Adds space around each button */
+    /* bottom sides 5px top 10 px */
+    padding: 10px 10px 5px 10px;
 }
 
 button:hover {
@@ -17,27 +34,41 @@ button:hover {
 }
 
 body, html {
+    font-family: 'carouselambra', sans-serif;
     margin: 0; /* Remove default margin */
     /* Removed height: 100vh; to allow for flexible content height */
-    width: 100vw; /* Full viewport width */
+    width: 100vw;
+    min-height: 100vh;
     overflow-x: hidden; /* Prevent horizontal scrolling */
     display: flex;
     flex-direction: column; /* Stack content vertically */
     background-color: #000; /* Black background to match Led Zeppelin's iconic dark themes */
     color: #fff; /* White text for contrast */
-    font-family: 'Rockwell', 'Courier Bold', serif; /* Rockwell or similar for a classic rock feel */
+    /* font-family: 'Rockwell', 'Courier Bold', serif; Rockwell or similar for a classic rock feel */
     justify-content: center; /* Adjusted to flex-start to accommodate nav bar */
     align-items: center; /* Center vertically */
+    text-align: center; /* Center text */
+    
+}
+
+main {
+    flex: 1; /* Allow main content to take up remaining space */
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
     text-align: center; /* Center text */
 }
 
 /* Add specific styles for the nav bar if it's part of the HTML structure */
 .nav-bar {
+    
     width: 100%; /* Full width */
     position: fixed; /* Fixed at the top */
     top: 0; /* Align to top */
     z-index: 1000; /* Ensure it's above other content */
     /* Add background, padding, etc., as needed */
+    margin-top: 1em;
 }
 
 .image-container {
@@ -47,7 +78,6 @@ body, html {
     display: flex; /* Use flexbox to center the image if needed */
     padding: 0%; /* Remove default padding */
     margin: 0; /* Remove default margin */
-
     justify-content: center;
     align-items: center;
     text-align: center; /* Center images horizontally */
@@ -64,8 +94,6 @@ body, html {
     align-items: center;
     max-width: 95vw;
     width: 90%;
-    top: 1;
-    left: 1;
     transform-origin: center;
 }
 
@@ -85,11 +113,49 @@ body, html {
 }
 
 .controls {
-    z-index: 3;
+
     width: 90vh;
     max-width: 90vw;
     display: flex;
     flex-flow: row wrap;
     align-items: center;
     justify-content: center;
+}
+
+a,p {
+    font-family: 'ZEPPELIN', sans-serif;
+    
+}
+a {
+    font-size: 2em;
+    /* make look like slighly differnt buttons */
+    background-color: #404040; /* Dark grey, almost black for buttons */
+    color: #C0C0C0; /* Silver text color */
+    text-decoration: none;
+    /* add a buffer of color around text */
+    padding: 5px 10px;
+    border: 1px solid #707070; /* Slightly lighter border for definition */
+    display: inline-block;
+    margin-top: 0.5em;
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for background and text color */
+}
+
+p {
+    font-size: 2em;
+    margin: 0;
+    margin-top: -1em;
+}
+
+.other {
+    font-size: 2em;
+    margin-top: 0;
+}
+
+h1 {
+    font-size: 4em;
+}
+
+h2 {
+    font-family: 'ZEPPELIN', sans-serif;
+    font-size: 2.5em;
 }
