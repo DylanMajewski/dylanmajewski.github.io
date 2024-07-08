@@ -2,13 +2,13 @@
 
 @font-face {
     font-family: 'ZEPPELIN';
-    src: url('../fonts/ZEPPELIN.ttf') format('truetype'); /* Safari, Android, iOS */
-    /* src: url('../fonts/ format('woff2'), Modern Browsers */
+    src: url('https://user.github.io/LedZeppelinTheme/fonts/ZEPPELIN.ttf') format('truetype'); /* Safari, Android, iOS */
+    /* src: url('https://user.github.io/LedZeppelinTheme/fonts/ZEPPELIN.woff2') format('woff2'), Modern Browsers */
 }
 
 @font-face {
     font-family: 'carouselambra';
-    src: url('../fonts/carouselambra-regular.otf') format('opentype'); /* Safari, Android, iOS */
+    src: url('https://user.github.io/LedZeppelinTheme/fonts/carouselambra-regular.otf') format('opentype'); /* Safari, Android, iOS */
 }
 
 button {
@@ -25,6 +25,13 @@ button {
     margin: 1px; /* Adds space around each button */
     /* bottom sides 5px top 10 px */
     padding: 10px 10px 5px 10px;
+}
+
+img {
+    display: block;
+    max-width: 100%; /* Ensures images are responsive and do not exceed their container's width */
+    height: auto; /* Maintains the aspect ratio of the images */
+    margin: 20px 0; /* Adds vertical space above and below the image */
 }
 
 button:hover {
@@ -92,7 +99,7 @@ main {
     justify-content: center;
     align-items: center;
     max-width: 95vw;
-    width: 90%;
+    max-width: 90%;
     transform-origin: center;
 }
 
