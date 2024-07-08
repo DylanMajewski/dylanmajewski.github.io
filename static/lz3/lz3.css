@@ -8,8 +8,7 @@
 
 @font-face {
     font-family: 'carouselambra';
-    src: url('../fonts/carouselambra.ttf') format('truetype'); /* Safari, Android, iOS */
-    /* src: url('../fonts/ format('woff2'), Modern Browsers */
+    src: url('../fonts/carouselambra-regular.otf') format('opentype'); /* Safari, Android, iOS */
 }
 
 button {
@@ -81,7 +80,6 @@ main {
     justify-content: center;
     align-items: center;
     text-align: center; /* Center images horizontally */
-    position: relative;
 }
 
 #rotatableImage, #image2 {
@@ -89,6 +87,7 @@ main {
     width: auto; /* Adjust width automatically */
     padding: 0%; /* Remove default padding */
     margin: 0; /* Remove default margin */
+    display: flex; /* Display as a block element */
     position: absolute;
     justify-content: center;
     align-items: center;
