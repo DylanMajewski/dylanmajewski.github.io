@@ -2,13 +2,15 @@
 
 @font-face {
     font-family: 'ZEPPELIN';
-    src: url('https://dylanmajewski.github.io/LedZeppelinTheme/fonts/ZEPPELIN.ttf') format('truetype'); /* Safari, Android, iOS */
-    /* src: url('https://dylanmajewski.github.io/LedZeppelinTheme/fonts/ZEPPELIN.woff2') format('woff2'), Modern Browsers */
+    /* src: url('../fonts/ZEPPELIN.ttf') format('truetype'); */
+    src: url('https://github.com/DylanMajewski/dylanmajewski.github.io/blob/main/static/fonts/ZEPPELIN.TTF') format('truetype');
+    /* github version */
 }
 
 @font-face {
     font-family: 'carouselambra';
-    src: url('https://dylanmajewski.github.io/LedZeppelinTheme/fonts/carouselambra-regular.otf') format('opentype'); /* Safari, Android, iOS */
+    /* src: url('../fonts/carouselambra.ttf') format('truetype'); */
+    src: url('https://github.com/DylanMajewski/dylanmajewski.github.io/blob/main/static/fonts/carouselambra.ttf') format('opentype');
 }
 
 button {
