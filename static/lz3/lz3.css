@@ -2,15 +2,15 @@
 
 @font-face {
     font-family: 'ZEPPELIN';
-    /* src: url('../fonts/ZEPPELIN.ttf') format('truetype'); */
-    src: url('https://github.com/DylanMajewski/dylanmajewski.github.io/blob/main/static/fonts/ZEPPELIN.TTF') format('truetype');
+    src: url('../fonts/ZEPPELIN.ttf') format('truetype');
+    /* src: url('https://github.com/DylanMajewski/dylanmajewski.github.io/blob/main/static/fonts/ZEPPELIN.TTF') format('truetype'); */
     /* github version */
 }
 
 @font-face {
     font-family: 'carouselambra';
-    /* src: url('../fonts/carouselambra.ttf') format('truetype'); */
-    src: url('https://github.com/DylanMajewski/dylanmajewski.github.io/blob/main/static/fonts/carouselambra.ttf') format('opentype');
+    src: url('../fonts/carouselambra.ttf') format('truetype');
+    /* url('../../dylanmajewski.github.io/fonts/carouselambra.ttf') format('opentype'); */
 }
 
 button {
