@@ -19,7 +19,7 @@ button {
     border: 1px solid #707070; /* Slightly lighter border for definition */
     z-index: 3;
     padding: 5px 10px; /* Buffer around the text */
-    font-family: 'ZEPPELIN', sans-serif;
+    font-family: 'carouselambra', sans-serif;
     cursor: pointer; /* Cursor indicates clickable */
     transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effects */
     display: inline-block;
@@ -100,8 +100,8 @@ main {
     position: absolute;
     justify-content: center;
     align-items: center;
-    max-width: 95vw;
-    max-width: 90%;
+    max-width: 85vw;
+    max-width: 85%;
     transform-origin: center;
 }
 
@@ -131,7 +131,7 @@ main {
 }
 
 a,p {
-    font-family: 'ZEPPELIN', sans-serif;
+    font-family: 'carouselambra', sans-serif;
     
 }
 a {
@@ -164,6 +164,5 @@ h1 {
 }
 
 h2 {
-    font-family: 'ZEPPELIN', sans-serif;
     font-size: 2.5em;
 }
