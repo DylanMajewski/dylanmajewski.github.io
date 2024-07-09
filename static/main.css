@@ -402,7 +402,11 @@ label.required:after {
   }
 
 /* ----- Media ----- */
-figure {}
+figure {display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;}
   figcaption {}
   figure img {}
 svg {
