@@ -82,7 +82,7 @@ main {
 .image-container {
     position: relative;
     width: 100%; /* Take up full width */
-    min-height: 90vh; /* Minimum height to fill the screen vertically */
+    min-height: 90vmin; /* Minimum height to fill the screen vertically */
     display: flex; /* Use flexbox to center the image if needed */
     padding: 0%; /* Remove default padding */
     margin: 0; /* Remove default margin */
@@ -100,14 +100,13 @@ main {
     position: absolute;
     justify-content: center;
     align-items: center;
-    max-width: 85vw;
     max-width: 85%;
     transform-origin: center;
 }
 
 #rotatableImage {
-            max-height: 88vh; /* Ensure image does not exceed viewport height */
-
+    max-height: 88vh; /* Ensure image does not exceed viewport height */
+    max-width: 88%;
     transition: transform 0.1s; /* Smooth rotation */
     transform-origin: center; /* Rotate around the center */
     z-index: 1; /* Ensures rotatableImage is behind image2 */
@@ -115,8 +114,8 @@ main {
 }
 
 #image2 {
-            max-height: 90vh; /* Ensure image does not exceed viewport height */
-
+    max-height: 90vh; /* Ensure image does not exceed viewport height */
+    max-width: 90%;
     z-index: 2; /* Ensures image2 covers rotatableImage */
 }
 
