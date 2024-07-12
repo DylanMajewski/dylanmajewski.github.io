@@ -1,0 +1,6 @@
+# from fresh pull:
+# use gitbash terminal
+
+python -m venv ./venv
+source venv/scripts/activate
+pip3 install flask

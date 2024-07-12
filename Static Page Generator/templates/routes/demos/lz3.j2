@@ -1,0 +1,42 @@
+{% extends "main.j2" %}
+{% block title %}Led Zeppelin 3{% endblock %}
+{% block stylesheet %}rel="stylesheet" type="text/css" media="screen" href="../static/lz3/lz3.css"{% endblock %}
+    
+{% block script %}
+    src="../static/lz3/rotator.js">
+{% endblock %}
+{% block rest %}{% endblock %}
+{% block name %}<h2>Led Zeppelin 3 Vinyl Album Art Simulator</h2>{% endblock %}
+
+{% block content %}
+    {{ super() }}
+    <p class="other">Press the buttons below to rotate the image</p>
+    {# an input field to set the angle with id angleInput #}
+    {# stack two images of different sizes stacked on top of each other centered on the same spot#}
+
+    <div class="image-container">
+                {# <img align="center" id="rotatableImage" src="../static/lz3/vovelle.png" style="max-width: 100%" > #}
+                <img align="center" id="rotatableImage" src="../static/lz3/vovelle.png">
+                <img align="center" id="image2" src="../static/lz3/g1.png">
+    </div>
+
+
+    <div class="controls">
+        {# a button to set the angle with id setAngleButton #}
+        <button id="rotateCounterClockwise">Hold left</button>
+        <button id="rotateClockwise">Hold Right</button>
+
+        <button id="toggleAutoRotate">Toggle Auto Rotate</button>        {# text to display the current angle #}
+        {# <p id="rotationAngleDisplay">Angle: 0</p> #}
+        
+        {# anlge setting buttons 20 115 240 287 degrees #}
+    </div>
+    <div class="controls" style="margin-bottom: 20px;">
+
+        <button class="angleButton" data-angle="20">Jones</button>
+        <button class="angleButton" data-angle="115">Page</button>
+        <button class="angleButton" data-angle="240">Bonham</button>
+        <button class="angleButton" data-angle="287">Plant</button>
+        <button id="toggleFollowMouse" >Point to Mouse</button>
+    </div>
+{% endblock %}

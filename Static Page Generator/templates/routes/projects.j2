@@ -1,0 +1,12 @@
+{% extends "main.j2" %}
+{% block title %}Projects{% endblock %}
+{% block name %}<h2>Projects</h2>{% endblock %}
+
+{% block content %}
+    {{ super() }}
+        
+        {% for project in projects %}
+            <a href="/projects/{{ project }}">{{ project }}</a>
+        {% endfor %}
+
+{% endblock %}

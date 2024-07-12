@@ -1,0 +1,63 @@
+{% extends "main.j2" %}
+{% block title %}Assets{% endblock %}
+{% block name %}<h2>Assets</h2>{% endblock %}
+
+{% block content %}
+    {{ super() }}
+    <section>
+
+            <p>
+                These are vairous things I have made and wanted to share.
+            </p>
+
+            <article class="gallery">
+
+                <figure>            
+                    <img 
+                        src="../static/assets/mavica.gif"
+                        alt="Sony Mavica Rolling Save animation."
+                    />
+                    <figcaption>   
+                        Animation of a Sony Mavica camera saving a photo to a floppy disk. 
+                        Frames were recreated in inkscape from reference video and animated in screen2gif.
+                    </figcaption>
+                </figure>
+
+                <figure>            
+                    <img 
+                        src="../static/assets/interurban.svg"
+                        alt="Seattle-Everett Interurban Railway Logo."
+                    />
+                    <figcaption>
+                        Logo of the Seattle-Everett Interurban Railway, which ran from 1910 to 1939 and now is a trail.
+                        Logo was recreated in inkscape from a reference image. 
+                    </figcaption>
+                </figure>
+
+                <figure>            
+                    <img 
+                        src="../static/assets/HMB.svg"
+                        alt="Eta Mu Beta Logo."
+                    />
+                    <figcaption>
+                        Logo of Eta Mu Beta, a fake fraternity that serves as a generic name for projects involving marching band,
+                        such as the Seattle Pride Parade group and the youtube channel that digitizes old marching band videos.
+                        Logo was created in inkscape, with sub assets created mostly taken from the internet.
+                    </figcaption>
+                </figure>
+
+                <figure>            
+                    <img 
+                        src="../static/assets/KKPsi.svg"
+                        alt="Kappa Kappa Psi Gamma Chapter Logo."
+                    />
+                    <figcaption>
+                        Logo of the Gamma Chapter of Kappa Kappa Psi, made to replace the old logo that was a bit too close to the national logo.
+                        Logo was created in inkscape, with sub assets created mostly taken from the internet with the exception of the ribbons.
+                        Follows nation and school branding guidelines and includes many chapter specific elements.
+                    </figcaption>
+
+            </article>
+        </section>
+
+{% endblock %}

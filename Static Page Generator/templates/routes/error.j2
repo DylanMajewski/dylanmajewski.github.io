@@ -1,0 +1,12 @@
+{% extends "main.j2" %}
+{% block title %}404{% endblock %}
+{% block name %}<h2>404</h2>{% endblock %}
+
+{% block content %}
+    {{ super() }}
+    {# This is the error page
+        show the error image and display the error code passed to the page with variable name error#}
+        
+        <p>Error 404</p>
+        <img src="/static/construction.jpg" alt="Under Construction" style="width: 100%; height: auto;">
+{% endblock %}
