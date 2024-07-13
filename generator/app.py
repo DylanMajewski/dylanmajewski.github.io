@@ -15,10 +15,18 @@ def home():
 def index():
     return render_template('/routes/index.j2')
 
-@ app.route('/projects')
+@app.route('/projects')
 def projects():
     projects = []
-    for file in os.listdir('/templates/routes/projects'):
+    # Construct an absolute path to the 'templates/routes/projects' directory
+    base_dir = os.path.dirname(os.path.abspath(__file__))
+    projects_dir = os.path.join(base_dir, 'templates', 'routes', 'projects')
+
+    if not os.path.exists(projects_dir):
+        print(f"Directory does not exist: {projects_dir}")
+        return "Projects directory not found.", 404
+
+    for file in os.listdir(projects_dir):
         if file.endswith('.j2'):
             projects.append(file[:-3])
     return render_template('/routes/projects.j2', projects=projects)
@@ -31,10 +39,18 @@ def project(project):
 @ app.route('/demos')
 def demos():
     demos = []
-    for file in os.listdir(f'templates/routes/demos'):
+    base_dir = os.path.dirname(os.path.abspath(__file__))
+    demos_dir = os.path.join(base_dir, 'templates', 'routes', 'demos')
+
+    if not os.path.exists(demos_dir):
+        print(f"Directory does not exist: {demos_dir}")
+        return "Demos directory not found.", 404
+    
+    for file in os.listdir(demos_dir):
         if file.endswith('.j2'):
             demos.append(file[:-3])
     return render_template('/routes/demos.j2', demos=demos)
+
 
 @ app.route('/demos/<demo>')
 def demo(demo):
