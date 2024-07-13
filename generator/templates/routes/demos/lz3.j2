@@ -1,12 +1,15 @@
 {% extends "main.j2" %}
-{% block title %}Led Zeppelin 3{% endblock %}
+# Title: Led Zeppelin 3 Vinyl Album Art Simulator
+{% set title = "Led Zeppelin 3 Vinyl Album Art Simulator" %}
+
+{% block title %}{{title}}{% endblock %}
 {% block stylesheet %}rel="stylesheet" type="text/css" media="screen" href="../static/lz3/lz3.css"{% endblock %}
     
 {% block script %}
     src="../static/lz3/rotator.js">
 {% endblock %}
 {% block rest %}{% endblock %}
-{% block name %}<h2>Led Zeppelin 3 Vinyl Album Art Simulator</h2>{% endblock %}
+{% block name %}<h2>{{title}}</h2>{% endblock %}
 
 {% block content %}
     {{ super() }}

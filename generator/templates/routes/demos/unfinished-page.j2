@@ -1,7 +1,9 @@
 {% extends "main.j2" %}
-{% block title %}Unfinished Page{% endblock %}
+# Title: unfinished_page
+{% set title = "unfinished_page" %}
+{% block title %}{{title}}{% endblock %}
 {% block stylesheet %}{% endblock %}
-{% block name %}<h2>Unfinished Page</h2>{% endblock %}
+{% block name %}<h2>{{title}}</h2>{% endblock %}
 {% block content %}
         {{ super() }}
         <p>

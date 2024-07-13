@@ -1,6 +1,8 @@
 {% extends "main.j2" %}
-{% block title %}Assets{% endblock %}
-{% block name %}<h2>Assets</h2>{% endblock %}
+# Title: Creations
+{% set title = "Creations" %}
+{% block title %}{{title}}{% endblock %}
+{% block name %}<h2>{{title}}</h2>{% endblock %}
 
 {% block content %}
     {{ super() }}

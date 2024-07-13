@@ -1,1 +1,17 @@
-I need to actually curate my own content for this project
+{% extends "main.j2" %}
+# Title: This Website
+{% set title = "This Website" %}
+{% block title %}{{title}}{% endblock %}
+{% block name %}<h2>{{title}}</h2>{% endblock %}
+
+{% block content %}
+    {{ super() }}
+    <a href="https://github.com/DylanMajewski/dylanmajewski.github.io">This Website's Github</a>
+    <p>
+        The website is a portfolio of my projects and demos. It is a work in progress and I am always looking for ways to improve it.
+    </p>
+    <p>
+        This website is a made with Flask, a Python web framework. I made a converter to save the rendered pages as static HTML, which is then hosted on Github Pages.
+    </p>
+
+{% endblock %}

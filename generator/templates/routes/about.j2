@@ -3,7 +3,9 @@
 {% block name %}<h2>About</h2>{% endblock %}
 
 {% block content %}
-    <a href="https://github.com/DylanMajewski">My Github</a>
-    <a href="https://www.linkedin.com/in/dylan-majewski-8a00b2177/">My LinkedIn</a>
+    {{ super() }}
+    <p><a href="https://github.com/DylanMajewski">My Github</a></p>
+    
+    <p><a href="https://www.linkedin.com/in/dylan-majewski-8a00b2177/">My LinkedIn</a></p>
 
 {% endblock %}

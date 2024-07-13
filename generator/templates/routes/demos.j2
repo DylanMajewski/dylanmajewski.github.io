@@ -6,7 +6,10 @@
     {{ super() }}
         
         {% for demo in demos %}
-            <a href="/demos/{{ demo }}">{{ demo }}</a>
+            <p>
+                
+                <a href="/demos/{{ demo.name }}"> {{ demo.title }} </a>
+            </p>
         {% endfor %}
 
 

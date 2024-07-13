@@ -47,7 +47,7 @@ def get_routes(files):
 
 def copy_static_files():
     # path of static folder in same directory
-    src = './Static Page Generator/static'  # Relative path to the source folder
+    src = './generator/static'  # Relative path to the source folder
     dst = './static'  # Relative path to the destination folder
 
     # Check if the destination folder exists, and remove it if it does
@@ -62,6 +62,6 @@ def copy_static_files():
 
 if __name__ == "__main__":
     files = get_files()     # get all files in /templates/routes
-    # create_folders(files)   # create folders for each directory in the files list
-    # get_routes(files)       # request the route from the app, 
+    create_folders(files)   # create folders for each directory in the files list
+    get_routes(files)       # request the route from the app, 
     copy_static_files()     # copy the static files to the static folder

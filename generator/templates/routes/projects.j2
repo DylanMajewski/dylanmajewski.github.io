@@ -6,7 +6,10 @@
     {{ super() }}
         
         {% for project in projects %}
-            <a href="/projects/{{ project }}">{{ project }}</a>
+            <p>
+                
+                <a href="/projects/{{ project.name }}"> {{ project.title }} </a>
+            </p>
         {% endfor %}
 
 {% endblock %}
