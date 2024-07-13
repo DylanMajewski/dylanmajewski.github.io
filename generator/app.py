@@ -18,7 +18,7 @@ def index():
 @ app.route('/projects')
 def projects():
     projects = []
-    for file in os.listdir(f'templates/routes/projects'):
+    for file in os.listdir('/templates/routes/projects'):
         if file.endswith('.j2'):
             projects.append(file[:-3])
     return render_template('/routes/projects.j2', projects=projects)
