@@ -108,6 +108,10 @@ def about():
 def under_construction():
     return render_template('/routes/unfinished-page.j2')
 
+@ app.route('/birthday')
+def birthday():
+    return render_template('/routes/birthday.j2')
+
 # if route does not exist, return a 404 page
 @ app.errorhandler(404)
 def page_not_found(e):

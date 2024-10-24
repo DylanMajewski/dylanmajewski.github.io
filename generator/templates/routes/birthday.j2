@@ -1,0 +1,22 @@
+{% extends "main.j2" %}
+# Title: Dylan's Birthday Party!
+{% set title = "Dylan's Birthday Party!" %}
+{% block title %}{{title}}{% endblock %}
+{% block stylesheet %}rel="stylesheet" type="text/css" media="screen" href="../static/birthday.css"{% endblock %}
+{% block name %}<h2>{{title}}</h2>{% endblock %}
+{% block content %}
+        {{ super() }}
+        <p>
+            If I sent you to this page, it is because you are invited to my little party! (^_^)
+        </p>
+        <p>
+            
+            <b>When:</b> Saturday, November 23rd, 8PM
+            <br>
+            <b>Where:</b> Kate's Pub, 309 NE 45th St, Seattle, WA 98105
+            <br>
+            <b>What:</b> IDK, just hanging out and having a few drinks, I'm not too good at event planning. I'll probably have cards and feel free to bring a simple board game. Maybe go back to my place after if people are still up for it.
+            
+        </p>
+
+{% endblock %}
